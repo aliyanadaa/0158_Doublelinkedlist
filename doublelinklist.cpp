@@ -52,4 +52,17 @@ while (current->next != NULL && current->next->noMhs < nim)
 {
     current = current->next;
 }
+if (current->next != NULL && nim == current->next->noMhs)
+{
+    cout << "Duplicate roll numbers not allowed" << endl;
+    return;
+}
 
+newnode->next = current->next;
+newnode->prev = current;
+
+if (current->next != NULL)
+    current->next->prev = newnode;
+
+current->next = newnode;
+}
