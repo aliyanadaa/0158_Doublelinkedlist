@@ -24,3 +24,4 @@ public:
     int nim;
     cout << "Enter the roll number of the student: ";
     cin >> nim;
+    
